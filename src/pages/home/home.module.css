@@ -1,0 +1,15 @@
+.main {
+  padding: 24px;
+  position: absolute;
+  left: 250px;
+  width: calc(100% - 300px);
+}
+
+.cards {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 24px;
+  justify-content: center;
+  align-items: center;
+}

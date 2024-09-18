@@ -8,22 +8,22 @@ export function Aside({text}){
         <div className={styles.aside}>
 
             <ul className={styles.list}>
-                <li>Biblioteca <img className={styles.book} src={book} alt="" /></li>
+                <li className={styles['aside-li']}>Biblioteca <img className={styles.book} src={book} alt="" /></li>
 
                 <div className={styles['div-li']}>
-                <li>Favoritos</li>
+                <li className={styles['aside-li']}>Favoritos</li>
                 </div>
 
                 <div className={styles['div-li']}>
-                <li>Lidos</li>
+                <li className={styles['aside-li']}>Lidos</li>
                 </div>
 
                 <div className={styles['div-li']}>
-                <li>Desejos</li>
+                <li className={styles['aside-li']}>Desejos</li>
                 </div>
 
                 <div className={styles['div-li']}>
-                <li>{text}</li>
+                <li className={styles['aside-li']}>{text}</li>
                 </div>
             </ul>
 

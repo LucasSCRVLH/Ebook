@@ -8,8 +8,8 @@
     align-items: center;
     flex-direction: column;
     border-right: 1px solid #88765394;
-
 }
+
 .list{
    gap: 10px;
    display: flex;
@@ -20,7 +20,7 @@
     width: 40px;
 }
 
-li{
+.aside-li{
     width: 250px;
     height: 60px;
     display: flex;

@@ -2,7 +2,9 @@ import { Header } from "../../components/Header";
 
 
 
-export function Order(){
+
+
+export function Read(){
 
    return(
        

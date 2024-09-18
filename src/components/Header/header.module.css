@@ -1,0 +1,28 @@
+.header{
+    height: 100%;
+    max-height: 80px;
+    display: flex;
+   justify-content: flex-start;
+    align-items: center;
+    border-bottom: 1px solid #88765394;
+}
+
+.list{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+.logo{
+    width: 100px;
+}
+
+.search{
+    width: 300px;
+    padding: 8px;
+    border: 1px solid black;
+}
+
+.search:focus{
+border: 1px solid #887653;
+}

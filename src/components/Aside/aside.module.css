@@ -1,0 +1,41 @@
+.aside{
+    padding: 20px;
+    width: 100%;
+    max-width: 250px;
+    position: fixed;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    border-right: 1px solid #88765394;
+
+}
+.list{
+   gap: 10px;
+   display: flex;
+   flex-direction: column;
+
+}
+.book{
+    width: 40px;
+}
+
+li{
+    width: 250px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.div-li:hover{
+    background-color: #88765360;
+    cursor: pointer;
+}
+
+.div-li:focus{
+    background-color: #887653;
+    cursor: pointer;
+}
+

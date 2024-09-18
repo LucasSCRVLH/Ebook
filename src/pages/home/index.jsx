@@ -1,18 +1,17 @@
 
-  export function Home(){
+import { Aside } from "../../components/Aside";
+import { Header } from "../../components/Header";
+import styles from "./home.module.css";
+ 
+ export function Home(){
 
-        return ( 
-        <header> 
-            
-            <ul className="aside"> 
-                <li>home</li>
-                <li>fav</li>
-                <li>pedidos</li>
-            </ul>
-
-        </header> )
-
-
-
+    return ( 
+       
+            <>
+            <Header/>
+        
+            <Aside />
+            </>
+    
+    )
   }
-

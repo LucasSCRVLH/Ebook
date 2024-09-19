@@ -1,5 +1,7 @@
 import styles from "./header.module.css";
 import logo from "../../assets/logo.png"
+import { IoMdSearch } from "react-icons/io";
+
 export function Header() {
   return (
     <header className={styles.header}>
@@ -16,7 +18,7 @@ export function Header() {
             placeholder="Pesquise o livro desejado"
             className={styles.search}
           />
-          <i class="fas fa-search"></i>
+          <IoMdSearch size={30}/>
         </li>
       </ul>
     </header>

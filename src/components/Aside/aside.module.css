@@ -8,6 +8,7 @@
     align-items: center;
     flex-direction: column;
     border-right: 1px solid #88765394;
+    grid-area: aside;
 }
 
 .list{

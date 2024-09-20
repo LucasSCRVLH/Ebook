@@ -15,13 +15,11 @@ export function Read(){
         <>
             <Header/>
         
-            <Aside text='Home' />
+            <Aside/>
             
-           <section className={styles.main}>
-               <ul className={styles.cards}>
-
-               </ul>
-           </section>
+           <main className={styles.main}>
+              <Card />
+           </main>
             </>
 
     )

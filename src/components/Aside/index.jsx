@@ -1,7 +1,7 @@
 import styles from "./aside.module.css"
 import book from "../../assets/book.png"
 
-export function Aside({text}){
+export function Aside(){
 
     return(
 
@@ -20,10 +20,6 @@ export function Aside({text}){
 
                 <div className={styles['div-li']}>
                 <li className={styles['aside-li']}>Desejos</li>
-                </div>
-
-                <div className={styles['div-li']}>
-                <li className={styles['aside-li']}>{text}</li>
                 </div>
             </ul>
 

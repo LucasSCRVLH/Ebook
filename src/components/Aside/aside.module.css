@@ -1,4 +1,4 @@
-.aside{
+.aside {
     padding: 20px;
     width: 100%;
     max-width: 250px;
@@ -8,35 +8,68 @@
     align-items: center;
     flex-direction: column;
     border-right: 1px solid #88765394;
-    grid-area: aside;
 }
 
-.list{
-   gap: 10px;
-   display: flex;
-   flex-direction: column;
-
+.list {
+    gap: 10px;
+    display: flex;
+    flex-direction: column;
 }
-.book{
+
+.book {
     width: 40px;
+    cursor: pointer;
 }
 
-.aside-li{
+.aside-li {
     width: 250px;
     height: 60px;
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 10px;
+    font-family: 'Poppins-Regular';
+   
 }
 
-.div-li:hover{
+.div-li:hover {
     background-color: #88765360;
     cursor: pointer;
 }
 
-.div-li:focus{
+.div-li:focus {
     background-color: #887653;
     cursor: pointer;
 }
 
+@media (min-width:320px) and (max-width:599px) {
+    .aside {
+        max-width: 150px;
+    }
+
+    .book {
+        width: 30px;
+    }
+
+    .aside-li {
+        height: 60px;
+        font-size: 14px;
+        
+    }
+}
+
+@media (max-width:319px) {
+    .aside {
+        max-width: 100px;
+    }
+
+    .book {
+        width: 24px;
+    }
+
+    .aside-li {
+        height: 40px;
+        font-size: 12px;
+
+    }
+}

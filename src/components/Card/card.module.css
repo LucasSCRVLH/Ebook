@@ -1,4 +1,13 @@
-.card{
+.cards {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 24px;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
     padding: 6px;
     width: 100%;
     max-width: 250px;
@@ -13,41 +22,59 @@
     border: 1px solid #b9b9b9ec;
 }
 
-.card:hover{
+.card:hover {
     transform: scale(1.05);
 }
 
-.header-card{
+.header-card {
     width: 100%;
-    height: 300px;
+    height: 250px;
 }
 
-.img{
+.img {
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
 
-.main-card{
-    flex-direction: column;
-    justify-content: space-between;
+.main-card {
     display: flex;
+    flex-direction: column;
     width: 100%;
     height: 100%;
     max-width: 250px;
-    gap: 10px;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 16px;
 }
 
-.card-title{
-    font-size: 16px;
-    max-height: 80px;
+.title {
+    font-size: 20px;
+    max-height: 90px;
+    font-family: 'Poppins-Regular';
 }
 
-.card-details{
+.description{
+    max-height: 72px;
+}
+
+.card-details {
+    width: 100%;
+    text-align: center;
     display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
 }
 
-.footer-card{
+.name,
+.author {
+    color: #4d4b4bea;
+    font-size: 14px;
+    font-family: 'Poppins-Regular';
+}
+
+.footer-card {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -58,3 +85,54 @@
     padding: 16px;
 }
 
+@media (min-width: 1920px) {
+    .cards {
+        grid-template-columns: repeat(6, 1fr);
+    }
+}
+
+@media (min-width: 1550px) and (max-width:1919px) {
+    .cards {
+        grid-template-columns: repeat(5, 1fr);
+    }
+}
+
+@media (min-width: 1250px) and (max-width:1549px) {
+    .cards {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+@media (min-width: 1000px) and (max-width:1249px) {
+    .cards {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (min-width:800px) and (max-width:999px) {
+    .cards {
+        grid-template-columns: repeat(2, 1fr)
+    }
+}
+
+@media (min-width:600px) and (max-width:799px) {
+    .cards {
+        grid-template-columns: repeat(1, 1fr)
+    }
+}
+
+@media (min-width:320px) and (max-width:599px) {
+    .cards {
+        grid-template-columns: repeat(1, 1fr)
+    }
+}
+
+@media (max-width:319px) {
+    .cards {
+        grid-template-columns: repeat(1, 1fr)
+    }
+
+    .header-card {
+        height: 150px;
+    }
+}

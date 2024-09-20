@@ -5,11 +5,16 @@
   width: calc(100% - 300px);
 }
 
-.cards {
-  width: 100%;
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  gap: 24px;
-  justify-content: center;
-  align-items: center;
+@media (min-width:300px) and (max-width:599px) {
+  .main {
+    left: 150px;
+    width: calc(100% - 150px);
+  }
+}
+
+@media (max-width:319px) {
+  .main {
+    left: 100px;
+    width: calc(100% - 100px);
+  }
 }

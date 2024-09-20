@@ -10,14 +10,12 @@ export function Fav(){
         <>
             <Header/>
         
-            <Aside />
+            <Aside/>
            
            
-            <section className={styles.main}>
-                <ul className={styles.cards}>
-
-                </ul>
-            </section>
+            <main className={styles.main}>
+                <Card />
+            </main>
             </>
 
     )

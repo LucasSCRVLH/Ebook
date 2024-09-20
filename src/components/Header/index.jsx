@@ -18,7 +18,7 @@ export function Header() {
             placeholder="Pesquise o livro desejado"
             className={styles.search}
           />
-          <IoMdSearch size={30}/>
+          <IoMdSearch size={30} cursor={'pointer'}/>
         </li>
       </ul>
     </header>

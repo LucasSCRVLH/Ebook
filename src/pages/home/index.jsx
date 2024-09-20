@@ -6,30 +6,13 @@ import styles from "./home.module.css";
 export function Home() {
   return (
     <>
-        <Header />
+      <Header />
 
-        <Aside />
+      <Aside />
 
-        <section className={styles.main}>
-          <ul className={styles.cards}>
-            <Card />
-            <Card />
-            <Card />
-            <Card />
-            <Card />
-            <Card />
-            <Card />
-            <Card />
-            <Card />
-            <Card />
-            <Card />
-            <Card />
-            <Card />
-            <Card />
-            <Card />
-            <Card />
-          </ul>
-        </section>
+      <main className={styles.main}>
+        <Card />
+      </main>
     </>
   );
 }

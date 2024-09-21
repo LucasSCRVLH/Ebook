@@ -31,6 +31,10 @@ li{
 
 }
 
+.btn{
+  background-color: transparent;
+}
+
 .search:focus {
   border: 1px solid #887653;
 }

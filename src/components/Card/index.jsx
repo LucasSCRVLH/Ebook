@@ -6,7 +6,7 @@ import { FaHeart } from "react-icons/fa";
 import { FaBookmark } from "react-icons/fa6";
 import { FaCheckCircle } from "react-icons/fa";
 
-export function Card({ title, cover, description }) {
+export function Card({ title, cover, description, autor }) {
 
   return (
 
@@ -23,7 +23,7 @@ export function Card({ title, cover, description }) {
 
         <div className={styles["card-details"]}>
           <span className={styles.author}>Autor:</span>
-          <span className={styles.name}>Yuri Moreira Leocadio dasd</span>
+          <span className={styles.name}>{autor}</span>
         </div>
 
         <footer className={styles["footer-card"]}>

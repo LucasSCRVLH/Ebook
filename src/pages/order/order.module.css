@@ -6,14 +6,14 @@
  
 }
 
-@media (min-width:300px) and (max-width:599px) {
+@media (min-width:400px) and (max-width:599px) {
   .main {
     left: 150px;
     width: calc(100% - 150px);
   }
 }
 
-@media (max-width:319px) {
+@media (max-width:399px) {
   .main {
     left: 100px;
     width: calc(100% - 100px);

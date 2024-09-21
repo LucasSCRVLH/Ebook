@@ -29,7 +29,7 @@
     justify-content: center;
     gap: 10px;
     font-family: 'Poppins-Regular';
-   
+    color: black;
 }
 
 .div-li:hover {
@@ -42,7 +42,7 @@
     cursor: pointer;
 }
 
-@media (min-width:320px) and (max-width:599px) {
+@media (min-width:400px) and (max-width:544px) {
     .aside {
         max-width: 150px;
     }
@@ -54,11 +54,11 @@
     .aside-li {
         height: 60px;
         font-size: 14px;
-        
+
     }
 }
 
-@media (max-width:319px) {
+@media (max-width:399px) {
     .aside {
         max-width: 100px;
     }

@@ -40,13 +40,24 @@ li{
   font-family: 'Poppins-Light';
 }
 
-@media (min-width:300px) and (max-width:599px){
+@media (min-width:400px) and (max-width:544px){
   .logo{
     width: 80px;
   }
 
   .search{
     width: 90%;
+    padding: 6px;
+  }
+}
+
+@media (max-width:399px){
+  .logo{
+    width: 60%;
+  }
+
+  .search{
+    width: 80%;
     padding: 6px;
   }
 }

@@ -18,8 +18,6 @@ export function Order(){
            <main className={styles.main}>
                <Card />
            </main>
-            
-            
             </>
 
     )

@@ -5,8 +5,41 @@ import { FaRegHeart } from "react-icons/fa";
 import { FaHeart } from "react-icons/fa";
 import { FaBookmark } from "react-icons/fa6";
 import { FaCheckCircle } from "react-icons/fa";
+import { STORAGE_SERVICE } from "../../services/storage";
+import { DB_FAVORITES_KEY, DB_READ_KEY, DB_ORDER_KEY } from "../../services/storage";
+import { useEffect, useState } from "react";
 
 export function Card({ title, cover, description, autor }) {
+  const [isLiked, setIsLiked] = useState(false);
+  const [isBookmarked, setIsBookmarked] = useState(false);
+  const [isChecked, setIsChecked] = useState(false);
+
+  const book = { title, cover, description, autor }
+
+  useEffect(() => {
+    const favorites = JSON.parse(localStorage.getItem(DB_FAVORITES_KEY)) || [];
+    const read = JSON.parse(localStorage.getItem(DB_READ_KEY)) || [];
+    const order = JSON.parse(localStorage.getItem(DB_ORDER_KEY)) || [];
+
+    setIsLiked(favorites.some(book => book.title === title));
+    setIsBookmarked(read.some(book => book.title === title));
+    setIsChecked(order.some(book => book.title === title));
+  }, [title]);
+
+  const handleFavorite = () => {
+    setIsLiked(prev => !prev);
+    STORAGE_SERVICE.saveFavorite(book);
+  };
+
+  const handleRead = () => {
+    setIsBookmarked(prev => !prev);
+    STORAGE_SERVICE.saveRead(book);
+  };
+
+  const handleOrder = () => {
+    setIsChecked(prev => !prev);
+    STORAGE_SERVICE.saveOrder(book);
+  };
 
   return (
 
@@ -27,12 +60,23 @@ export function Card({ title, cover, description, autor }) {
         </div>
 
         <footer className={styles["footer-card"]}>
-          <FaRegHeart color="#000000" />
-          <FaHeart color="#ff0000" />
-          <FaRegBookmark color="#000000" />
-          <FaBookmark color="#ffff00" />
-          <FaRegCheckCircle color="#000000" />
-          <FaCheckCircle color="#038cfc" />
+          {isLiked ? (
+            <FaHeart color="#ff0000" onClick={handleFavorite} />
+          ) : (
+            <FaRegHeart color="#000000" onClick={handleFavorite} />
+          )}
+
+          {isBookmarked ? (
+            <FaBookmark color="#ffff00" onClick={handleRead} />
+          ) : (
+            <FaRegBookmark color="#000000" onClick={handleRead} />
+          )}
+
+          {isChecked ? (
+            <FaCheckCircle color="#038cfc" onClick={handleOrder} />
+          ) : (
+            <FaRegCheckCircle color="#000000" onClick={handleOrder} />
+          )}
         </footer>
       </div>
     </li>

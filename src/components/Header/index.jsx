@@ -23,6 +23,7 @@ export function Header({ onSearch }) {
           />
         </li>
         <li>
+          <form>
           <input
             type="text"
             placeholder="Pesquise o livro desejado"
@@ -30,9 +31,10 @@ export function Header({ onSearch }) {
             value={searchTerm}
             onChange={(e) => setSearchTerm(e.target.value)}
           />
-          <button className={styles.btn} onClick={handleSearchClick}>
+          <button className={styles.btn} onClick={handleSearchClick} type="submit">
             <IoMdSearch size={30} cursor={'pointer'} />
           </button>
+          </form>
         </li>
       </ul>
     </header>

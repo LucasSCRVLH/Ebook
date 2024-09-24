@@ -4,8 +4,6 @@ import { Link, useLocation } from "react-router-dom"
 
 export function Aside() {
     const { pathname } = useLocation();
-
-
     const isHome = pathname === "/";
 
     return (

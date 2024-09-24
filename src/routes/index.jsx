@@ -9,7 +9,7 @@ import { DefaultLayout } from "../layout/DefaultLayout";
 export function Routers() {
   return (
     <Routes>
-        <Route element={<DefaultLayout />} />
+        <Route element={<DefaultLayout />}></Route>
         <Route path="/" element={<Home />} />
         <Route path="/fav" element={<Fav />} />
         <Route path="/order" element={<Order />} />

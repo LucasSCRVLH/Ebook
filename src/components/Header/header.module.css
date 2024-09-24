@@ -18,9 +18,16 @@ li{
   align-items: center;
   width: 100%;
 }
+
 .logo {
   cursor: pointer;
   width: 100px;
+}
+
+form{
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .search {
@@ -28,7 +35,6 @@ li{
   padding: 8px;
   border: 1px solid black;
   margin-right: 12px;
-
 }
 
 .btn{

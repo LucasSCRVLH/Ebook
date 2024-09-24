@@ -14,8 +14,8 @@ export function Home() {
   };
 
   useEffect(() => {
-    api.get(`books/v1/volumes?q=${search}&maxResults=30&printType=books`)
-      .then(({ data }) => { setData(data.items), console.log(data) })
+    api.get(`books/v1/volumes?q=${search}+intitle:${search}&maxResults=30&printType=books`)
+      .then(({ data }) => { setData(data.items) })
       .catch((err) => { console.log(err) })
   }, [search])
 
@@ -27,7 +27,7 @@ export function Home() {
       <main className={styles.main}>
         {data.length === 0 ? (<p>Carregando...</p>) : (<ul className={styles.cards}>
           {data.map((item) => {
-            let description = "Sem descrição";
+            let description = "Peço desculpas por não encontrarmos a descrição do livro. Estou aqui para ajudar a resolver isso.";
             if (item.volumeInfo.description) {
               description = item.volumeInfo.description.substring(0, 100) + "...";
             }
@@ -40,7 +40,7 @@ export function Home() {
             return (
               <Card
                 key={item.id}
-                title={item.volumeInfo.title || "Sem título"}
+                title={item.volumeInfo.title.substring(0, 25) + "..." || "Sem título"}
                 description={description}
                 cover={cover}
                 autor={item.volumeInfo.authors || "Autor não encontrado"}

@@ -46,6 +46,7 @@
 
 .description {
     max-height: 90px;
+    text-transform: lowercase;
 }
 
 .card-details {
